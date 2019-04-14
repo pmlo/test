@@ -1,0 +1,27 @@
+{
+  "name": "fishbot",
+  "version": "1.2.0",
+  "description": "Discord Fortnite Bot of sorts.. eh",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "ZeroSiks",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite-pool": "^0.2.2",
+    "canvas": "^2.4.1",
+    "chalk": "^2.4.1",
+    "discord.js": "^11.3.2",
+    "enmap": "^4.6.5",
+    "eslint": "^5.10.0",
+    "fnbrco.js": "^1.0.1",
+    "fortnite": "^4.1.1",
+    "moment": "^2.22.2",
+    "moment-duration-format": "^2.2.2",
+    "moment-timezone": "^0.5.23",
+    "node-fetch": "^2.3.0",
+    "snekfetch": "^4.0.4"
+  }
+}
