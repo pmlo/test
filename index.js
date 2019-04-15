@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client(),
     Enmap = require('enmap'),
     fs = require('fs');
+let prefix = "!";
 
 client.config = require('./config.js');
 client.commands = new Enmap();
