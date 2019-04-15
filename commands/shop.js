@@ -90,8 +90,9 @@ exports.run = async (client, message) => { // eslint-disable-line no-unused-vars
         const attachment = new Discord.Attachment(canvas.toBuffer(), 'shop.png');
 
         const sendEmbed = (channel) => {
+            let myRole = message.guild.roles.find(role => role.name === "【🛒】 Boutique Fortnite");
+            client.channels.get("515646335513395212").sendMessage("Mention : " + myRole);
             const embed = new Discord.RichEmbed()
-                // .setColor(message && message.guild ? message.guild.me.displayHexColor : '#35c7e4')
                 .setColor('#6302c5')
                 .setTitle(`Boutique Fortnite - ${getTimeLeft()} till reset`)
                 .setDescription("N’oublie pas de mettre dans la Boutique notre Code Créateur :\n **LFDF-TOURNOI**")
