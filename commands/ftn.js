@@ -5,16 +5,6 @@ const Canvas = require('canvas');
 exports.run = async (client, message, args) => { // eslint-disable-line no-unused-vars
     Canvas.registerFont('./assets/LuckiestGuy.ttf', { family: 'luckiestguy' });
     Canvas.registerFont('./assets/Faruma.ttf', { family: 'faruma' });
-    /*
-    const applyText = (canvas, text) => {
-        const ctx = canvas.getContext('2d');
-        let fontSize = 20;
-        do {
-            ctx.font = `${fontSize -= 10}px luckiestguy`;
-        } while (ctx.measureText(text).width > canvas.width - 300);
-        return ctx.font;
-    };
-    */
     const fortnite = new fn(client.config.fnkey);
   
     let platform;
@@ -147,9 +137,7 @@ exports.run = async (client, message, args) => { // eslint-disable-line no-unuse
                         ctx.fillText('W.I.P', 660, 212);
 
                         const attachment = new Discord.Attachment(canvas.toBuffer(), './ree.png');
-                        // message.channel.send(attachment);
                         const embed = new Discord.RichEmbed()
-                            // .setColor(message.guild.me.displayHexColor ? message.guild.me.displayHexColor : '#35c7e4')
                             .setColor('#99AAB5')
                             .attachFile(attachment)
                             .setImage('attachment://ree.png');
@@ -163,11 +151,10 @@ exports.run = async (client, message, args) => { // eslint-disable-line no-unuse
         return console.log(err);
     }
 };
-
+//By Stricix
 exports.help = {
     name: 'fn',
     description: 'Fetches overall fortnite stats for a user from The Fortnite Tracker',
     usage: 'fn (Platform) [Epic Username]',
     examples: ['fn Ninja', 'fn ps4 PrismR22', 'fn xbox <insert an xbox player\'s name here cause idk any lol>', 'fn psn psn(skyray11)']
 };
-//[The Tracker Network](https://fortnitetracker.com/)
