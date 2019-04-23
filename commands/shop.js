@@ -20,10 +20,10 @@ const getTimeLeft = function() {
     }
 };
 
-exports.run = async (client, message) => { // eslint-disable-line no-unused-vars
+exports.run = async (client, message) => {
     const link = 'https://fortnite-public-api.theapinetwork.com/prod09/store/get';
     fetch(link).then(result => result.json()).then(async res => {
-        const ordering = {}, // map for efficient lookup of sortIndex
+        const ordering = {},
             sortOrder = ['legendary','epic','rare','uncommon','common'];
         for (let i=0; i<sortOrder.length; i++)
             ordering[sortOrder[i]] = i;
@@ -49,16 +49,8 @@ exports.run = async (client, message) => { // eslint-disable-line no-unused-vars
 
         const background = await Canvas.loadImage('./assets/wallpaper2.png');
         ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-        /*
-        ctx.fillStyle = 'rgba(13, 12, 12, 0.3)';
-        // ctx.fillStyle = '#2C2F33';
-        ctx.fillRect(10, 10, 830, Math.ceil((featured.length / 4) * 200) + 105);
-        ctx.fillRect(10, Math.ceil((featured.length / 4) * 200) + 128, 830, Math.ceil((daily.length / 4) * 200) + 125);
-        */
         ctx.font = '40px "luckiestguy"';
         ctx.fillStyle = '#99AAB5';
-        // ctx.fillText('ފީޗާޑް', 25, 80);
-        // ctx.fillText('ޑެއިލީ', 525, 80);
 
         ctx.fillText('Featured', 25, 45);
         ctx.fillText('Daily', 25, Math.ceil((featured.length / 4) * 200) + 160);
@@ -103,7 +95,6 @@ exports.run = async (client, message) => { // eslint-disable-line no-unused-vars
         };
         const lastupdate = res.lastupdate.toString();
         if (message) {
-            // message.channel.send(`Shop data for **${res.date}**`, attachment);
             sendEmbed(message.channel);
         } else {
             const oldShopDate = client.autoCheck.get('shop_latest');
@@ -120,9 +111,8 @@ exports.run = async (client, message) => { // eslint-disable-line no-unused-vars
             });
             client.autoCheck.set('shop_latest', lastupdate);
             console.log('New latest shop time set! ' + lastupdate);
-            // notify_channel.send(`Shop data for **${res.date}**`, attachment);
         }
-        
+        //By Stricix
     }).catch(err => console.error(err));
 };
 
