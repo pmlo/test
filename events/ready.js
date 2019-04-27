@@ -8,7 +8,7 @@ module.exports = (client) => {
         let min = time.getMinutes();
         let heur = time.getHours();
     
-        if(min == "01" && heur == "04") {
+        if(min == "01" && heur == "00") {
           var channel = client.channels.get('515646335513395212'); 
           channel.sendMessage("!shop");
         }
