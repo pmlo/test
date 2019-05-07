@@ -1,9 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
-const shop = require('./CronFile/shop.js');
-let cooldown = new Set();
-let cdseconds = 20;
 Enmap = require('enmap');
 let prefix = '!';
     
@@ -94,16 +91,4 @@ if(message.content === "!news") {
 }
 });
 
-client.login(process.env.token);
-
-client.on('error', console.error);
-
-var CronJob = require('cron').CronJob;
-  new CronJob('50 1 2 * * *', function() {
-    try{
-      shop.shop(client);
-    }catch(e){
-      console.log(e)
-    }
-
-  }, null, true, 'Europe/Paris');
+client.login(process.env.token)
