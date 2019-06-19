@@ -139,6 +139,7 @@ exports.run = async (client, message, args) => { // eslint-disable-line no-unuse
                         const attachment = new Discord.Attachment(canvas.toBuffer(), './ree.png');
                         const embed = new Discord.RichEmbed()
                             .setColor('#99AAB5')
+                            .setDescription(`📈 **Statistique Fortnite de ${message.member.user}**`)
                             .attachFile(attachment)
                             .setImage('attachment://ree.png');
                         message.channel.send({embed});
