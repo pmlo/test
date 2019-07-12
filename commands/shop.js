@@ -82,7 +82,7 @@ exports.run = async (client, message) => {
         const attachment = new Discord.Attachment(canvas.toBuffer(), 'shop.png');
 
         const sendEmbed = (channel) => {
-            let myRole = message.guild.roles.find(role => role.name === "【🛒】 Boutique Fortnite");
+            let myRole = message.guild.roles.find(role => role.name === "🛒 | Boutique Fortnite");
             client.channels.get("515646335513395212").sendMessage("Mention : " + myRole);
             const embed = new Discord.RichEmbed()
                 .setColor('#6302c5')
