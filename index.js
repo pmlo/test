@@ -47,7 +47,7 @@ client.on('message', message => {
         .setTimestamp()
         message.channel.send(fun_embed);
         console.log('Commande Fortnite');
-        client.channels.get("540107675397128202").send("Log / Utilisateur **" + message.author.username + "** / Commande **Fortnite**");
+        client.channels.get("664916311838687242").send("Log / Utilisateur **" + message.author.username + "** / Commande **Fortnite**");
     }
     if(message.content === prefix + "map") {
         var info_embed = new Discord.RichEmbed()
@@ -56,7 +56,7 @@ client.on('message', message => {
         .setImage('https://cdn.discordapp.com/attachments/516014468086628352/552154178865070091/Fortnite_MapComplete_Saison8.jpg')
         message.channel.sendMessage(info_embed);
         console.log('Commande Map');
-        client.channels.get("540107675397128202").send("Log / Utilisateur **" + message.author.username + "** / Commande **Map**");
+        client.channels.get("664916311838687242").send("Log / Utilisateur **" + message.author.username + "** / Commande **Map**");
     }
     if(message.content === "!sftn") {
         var fun_embed = new Discord.RichEmbed()
@@ -66,11 +66,11 @@ client.on('message', message => {
         .setTimestamp()
         message.channel.send(fun_embed);
         console.log('Commande Fun');
-        client.channels.get("540107675397128202").send("Log / Utilisateur **" + message.author.username + "** / Commande **Stats Fortnite**");
+        client.channels.get("664916311838687242").send("Log / Utilisateur **" + message.author.username + "** / Commande **Stats Fortnite**");
     }
     if(message.content === "!twitterfr") {
         message.channel.sendMessage(':calling: Twitter Fornite France : https://twitter.com/FortniteFR');
-        client.channels.get("540107675397128202").send("Log / Utilisateur **" + message.author.username + "** / Commande **Twitter Fortnite France**");
+        client.channels.get("664916311838687242").send("Log / Utilisateur **" + message.author.username + "** / Commande **Twitter Fortnite France**");
     }
     if(!message.guild) return;
     let args = message.content.trim().split(/ +/g)
@@ -83,11 +83,11 @@ client.on('message', message => {
         .setColor("#0092ff")
         .setDescription("➔ " + rep[reptaille]);
     message.reply(embed);
-client.channels.get("540107675397128202").send("Log / Utilisateur **" + message.author.username + "** / Commande **Spawn**");
+client.channels.get("664916311838687242").send("Log / Utilisateur **" + message.author.username + "** / Commande **Spawn**");
 }
 if(message.content === "!news") {
         message.channel.sendMessage(':globe_with_meridians: Toutes les Actualité Fornite : https://www.epicgames.com/fortnite/fr/news');
-        client.channels.get("540107675397128202").send("Log / Utilisateur **" + message.author.username + "** / Commande **News Fortnite**");
+        client.channels.get("664916311838687242").send("Log / Utilisateur **" + message.author.username + "** / Commande **News Fortnite**");
 }
 });
 
