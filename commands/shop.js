@@ -83,7 +83,7 @@ exports.run = async (client, message) => {
 
         const sendEmbed = (channel) => {
             let myRole = message.guild.roles.find(role => role.name === "『BOUTIQUE FORTNITE』");
-            client.channels.get("515646335513395212").sendMessage("Mention : " + myRole);
+            client.channels.get("661697068871581697").sendMessage("Mention : " + myRole);
             const embed = new Discord.RichEmbed()
                 .setColor('#6302c5')
                 .setTitle(`Boutique Fortnite - ${getTimeLeft()} till reset`)
