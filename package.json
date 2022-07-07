@@ -18,7 +18,7 @@
     "eslint": "^5.10.0",
     "fnbrco.js": "^1.0.1",
     "fortnite": "^4.1.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.4",
     "moment-duration-format": "^2.2.2",
     "moment-timezone": "^0.5.23",
     "node-fetch": "^2.3.0",
