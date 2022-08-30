@@ -20,7 +20,7 @@
     "fortnite": "^4.1.1",
     "moment": "^2.22.2",
     "moment-duration-format": "^2.2.2",
-    "moment-timezone": "^0.5.23",
+    "moment-timezone": "^0.5.35",
     "node-fetch": "^2.3.0",
     "snekfetch": "^4.0.4"
   }
